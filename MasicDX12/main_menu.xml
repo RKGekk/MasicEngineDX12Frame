@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<World>
+  <Actors>
+    
+    <Actor name="building1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshComponent>
+        <IsInvYNormalTexture>false</IsInvYNormalTexture>
+        <IsInstanced>true</IsInstanced>
+        <Mesh>data\objects\arabic_temple.gltf</Mesh>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="cage1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.168000" y="1.969000" z="1.458000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <MeshComponent>
+        <IsInvYNormalTexture>false</IsInvYNormalTexture>
+        <IsInstanced>true</IsInstanced>
+        <Mesh>data\objects\cage.gltf</Mesh>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="character1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="0.107" y="1.984" z="1.507" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="0.1250" y="0.1250" z="0.1250" />
+      </TransformComponent>
+      <AnimationComponent>
+        <IsInvYNormalTexture>false</IsInvYNormalTexture>
+        <IsInstanced>false</IsInstanced>
+        <Mesh>data\objects\tifa.gltf</Mesh>
+      </AnimationComponent>
+    </Actor>
+    
+    <Actor name="logo1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="-1.259" y="0.491" z="-1.447" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="0.600000" y="0.600000" z="0.600000" />
+      </TransformComponent>
+      <MeshComponent>
+        <IsInvYNormalTexture>false</IsInvYNormalTexture>
+        <IsInstanced>true</IsInstanced>
+        <Mesh>data\objects\logo3.gltf</Mesh>
+      </MeshComponent>
+    </Actor>
+
+    <Actor name="camera1" type="BasicTransformComponent" resource="data\actors\BasicTransformComponent.xml">
+      <TransformComponent>
+        <Position x="-0.300000" y="0.500000" z="-1.000000" />
+        <YawPitchRoll x="0.000000" y="0.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <CameraComponent>
+        <Fov>65.0</Fov>
+        <Near>0.1</Near>
+        <Far>100.0</Far>
+      </CameraComponent>
+    </Actor>
+
+    <Actor name="directLight1" type="LightComponent" resource="data\actors\LightComponent.xml">
+      <TransformComponent>
+        <Position x="0.000000" y="0.000000" z="0.000000" />
+        <YawPitchRoll x="-70.000000" y="45.000000" z="0.000000" />
+        <Scale x="1.000000" y="1.000000" z="1.000000" />
+      </TransformComponent>
+      <LightComponent>
+        <Light type="DirectionalLight" lantern="false">
+          <Strength r="0.945" g="0.98" b="1.0" a="1.0" />
+          <Attenuation const="0.1" linear="0.0" exp="0.0" />
+          <Shape range="100.0" spot="24.0" />
+          <Ambient r="0.1" g="0.1" b="0.1" />
+        </Light>
+      </LightComponent>
+      <ShadowCameraComponent>
+        <ShadowMapWidth>2048</ShadowMapWidth>
+        <ShadowMapHeight>2048</ShadowMapHeight>
+        <DepthBias>100000</DepthBias>
+        <DepthBiasClamp>0.1</DepthBiasClamp>
+        <SlopeScaledDepthBias>1.0</SlopeScaledDepthBias>
+      </ShadowCameraComponent>
+    </Actor>
+
+  </Actors>
+  <Scene>
+    <BackgroundColor r="0.729412" g="0.72549" b="0.705882" />
+    <Camera>
+      <SelectName>camera1</SelectName>
+    </Camera>
+    <Fog>
+      <FogStart>1.0</FogStart>
+      <FogRange>4.0</FogRange>
+      <FogColor r="0.490196" g="0.486875" b="0.466667" a="1.000000"/>;
+    </Fog>
+    <ActorAnimations TotalTimeSec="30">
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>0.01</TimePosSec>
+          <Translation x="-0.30000" y="1.216" z="-4.085" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>0.01</TimePosSec>
+          <YawPitchRoll x="0.000000" y="47.520000" z="0.000000" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>10.0</TimePosSec>
+          <Translation x="-0.30000" y="0.681" z="-1.074" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>10.0</TimePosSec>
+          <YawPitchRoll x="0.000000" y="-9.120000" z="0.000000" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>20.0</TimePosSec>
+          <Translation x="-1.064" y="2.5" z="0.358" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>20.0</TimePosSec>
+          <YawPitchRoll x="45.000000" y="-9.120000" z="0.000000" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>30.0</TimePosSec>
+          <Translation x="-1.064" y="2.6" z="1.705" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+      <ActorAnimation>
+        <AnimationForActorName>camera1</AnimationForActorName>
+        <RelativeKeyframe>
+          <TimePosSec>30.0</TimePosSec>
+          <YawPitchRoll x="90.000000" y="15.120000" z="0.000000" />
+        </RelativeKeyframe>
+      </ActorAnimation>
+    </ActorAnimations>
+  </Scene>
+</World>

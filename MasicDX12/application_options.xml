@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlayerOptions>
+  <Graphics>
+    <Renderer>Direct3D 12</Renderer>
+    <Width>1920</Width>
+    <Height>1080</Height>
+    <RunFullSpeed>false</RunFullSpeed>
+    <FullScreen>false</FullScreen>
+    <FullScreenMax>ture</FullScreenMax>
+    <ScreenTearing>false</ScreenTearing>
+    <DebugUI>true</DebugUI>
+  </Graphics>
+  <Sound sfxVolume="0.5" musicVolume="0.25"/>
+</PlayerOptions>
