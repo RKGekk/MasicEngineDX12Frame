@@ -164,6 +164,7 @@
     <ClCompile Include="graphics\effect_shadow_anim_instanced_pso.cpp" />
     <ClCompile Include="graphics\effect_anim_instanced_pso.cpp" />
     <ClCompile Include="graphics\RenderTypes\render_pass.cpp" />
+    <ClCompile Include="graphics\RenderTypes\render_pass_graph.cpp" />
     <ClCompile Include="nodes\aminated_mesh_node.cpp" />
     <ClCompile Include="nodes\basic_camera_node.cpp" />
     <ClCompile Include="graphics\effect_shadow_instanced_pso.cpp" />
