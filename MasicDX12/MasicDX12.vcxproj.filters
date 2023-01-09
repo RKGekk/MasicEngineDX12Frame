@@ -678,6 +678,9 @@
     <ClCompile Include="graphics\RenderTypes\render_pass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tools\unique_name.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\engine.h">
@@ -1407,6 +1410,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="graphics\RenderTypes\render_pass_graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\unique_name.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
