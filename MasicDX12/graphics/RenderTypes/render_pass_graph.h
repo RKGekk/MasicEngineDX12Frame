@@ -1,6 +1,5 @@
 #pragma once
 
-//#include <HardwareAbstractionLayer/ResourceState.hpp>
 #include "../../tools/unique_name.h"
 #include "render_pass_metadata.h"
 
@@ -12,6 +11,8 @@
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
+
+#include <d3d12.h>
 
 class RenderPassGraph {
 public:
@@ -25,7 +26,7 @@ public:
 		using SubresourceList = std::vector<uint32_t>;
 		using QueueIndex = uint64_t;
 
-		//Node(const RenderPassMetadata& pass_metadata, WriteDependencyRegistry* write_dependency_registry);
+		Node(const RenderPassMetadata& pass_metadata, RenderPassGraph::WriteDependencyRegistry* write_dependency_registry);
 
 		bool operator==(const Node& that) const;
 		bool operator!=(const Node& that) const;
