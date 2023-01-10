@@ -1,5 +1,7 @@
 #pragma once
 
+#define WIN32_LEAN_AND_MEAN
+
 #include "../../tools/unique_name.h"
 #include "render_pass_metadata.h"
 
@@ -13,6 +15,14 @@
 #include <unordered_set>
 
 #include <d3d12.h>
+
+#if defined(min)
+#undef min
+#endif
+
+#if defined(max)
+#undef max
+#endif
 
 class RenderPassGraph {
 public:
@@ -157,7 +167,7 @@ private:
 		std::vector<uint64_t> SyncedQueueIndices;
 	};
 
-	void EnsureRenderPassUniqueness(UniqueName passName);
+	void EnsureRenderPassUniqueness(UniqueName pass_name);
 	void BuildAdjacencyLists();
 	void DepthFirstSearch(uint64_t node_index, std::vector<bool>& visited, std::vector<bool>& on_stack, bool& is_cyclic);
 	void TopologicalSort();
